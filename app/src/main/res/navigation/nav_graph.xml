@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/fragmentMenuInicial"
+        android:name="com.example.vinyls.view.FragmentMenuInicial"
+        tools:layout="@layout/fragment_menu_inicial">
+        <action
+            android:id="@+id/action_fragmentMenuInicial_to_fragmentAlbumList"
+            app:destination="@id/fragmentAlbumList" />
+        <action
+            android:id="@+id/action_fragmentMenuInicial_to_fragmentMusicianList"
+            app:destination="@id/fragmentMusicianList" />
+        <action
+            android:id="@+id/action_fragmentMenuInicial_to_fragmentColeccionistaList"
+            app:destination="@id/fragmentColeccionistaList" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAlbumList"
+        android:name="com.example.vinyls.view.FragmentAlbumList"
+        tools:layout="@layout/fragment_album_list">
+        <action
+            android:id="@+id/action_fragmentAlbumList_to_fragmentAlbumDetail"
+            app:destination="@id/fragmentAlbumDetail" />
+        <action
+            android:id="@+id/action_fragmentAlbumList_to_fragmentAlbumCreate"
+            app:destination="@id/fragmentAlbumCreate" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAlbumDetail"
+        android:name="com.example.vinyls.view.FragmentAlbumDetail"
+        tools:layout="@layout/fragment_album_detail">
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="genero"
+            app:argType="string" />
+        <argument
+            android:name="cover"
+            app:argType="string" />
+        <argument
+            android:name="fecha"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_fragmentAlbumDetail_to_fragmentAddTrack"
+            app:destination="@id/fragmentAddTrack" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment><action android:id="@+id/action_global_fragmentMenuInicial" app:destination="@id/fragmentMenuInicial"/>
+    <fragment
+        android:id="@+id/fragmentMusicianList"
+        android:name="com.example.vinyls.view.fragmentMusicianList" >
+        <action
+            android:id="@+id/action_fragmentMusicianList_to_fragmentMusicianDetail"
+            app:destination="@id/fragmentMusicianDetail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentColeccionistaList"
+        android:name="com.example.vinyls.view.FragmentColeccionistaList"
+        tools:layout="@layout/fragment_coleccionista_list">
+    <action
+        android:id="@+id/actionFragmentCollectoristToFragmentCollectorDetail"
+        app:destination="@id/fragmentCollectorDetail"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentCollectorDetail"
+        android:name="com.example.vinyls.view.FragmentCollectorDetail"
+        tools:layout="@layout/fragment_collector_detail">
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="telephone"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentMusicianDetail"
+        android:name="com.example.vinyls.view.FragmentMusicianDetail"
+        tools:layout="@layout/fragment_musician_detail">
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="birthDate"
+            app:argType="string" />
+        <argument
+            android:name="image"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAlbumCreate"
+        android:name="com.example.vinyls.view.FragmentAlbumCreate">
+        <action
+            android:id="@+id/action_fragmentAlbumCreate_to_fragmentAlbumDetail"
+            app:destination="@id/fragmentAlbumDetail" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/fragmentAddTrack"
+        android:name="com.example.vinyls.view.FragmentAddTrack">
+        <argument android:name="albumName"
+            app:argType="string" />
+        <argument
+            android:name="albumId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_fragmentAddTrack_to_fragmentAlbumList"
+            app:destination="@id/fragmentAlbumList" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.vinyls.view.LoginFragment"
+        android:label=""
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.vinyls.view.MainFragment"
+        android:label=""
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_alarmaCreateFragment"
+            app:destination="@id/alarmaCreateFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_vozFragment"
+            app:destination="@id/vozFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/alarmaCreateFragment"
+        android:name="com.example.vinyls.view.AlarmaCreateFragment"
+        android:label=""
+        tools:layout="@layout/fragment_alarma_create" >
+        <action
+            android:id="@+id/action_alarmaCreateFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_alarmaCreateFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.vinyls.view.MapsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/vozFragment"
+        android:name="com.example.vinyls.view.VozFragment"
+        android:label=""
+        tools:layout="@layout/fragment_voz" >
+        <action
+            android:id="@+id/action_vozFragment_to_voz1Fragment"
+            app:destination="@id/voz1Fragment" />
+        <action
+            android:id="@+id/action_vozFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/voz1Fragment"
+        android:name="com.example.vinyls.view.Voz1Fragment"
+        android:label=""
+        tools:layout="@layout/fragment_voz1" >
+        <action
+            android:id="@+id/action_voz1Fragment_to_voz2Fragment"
+            app:destination="@id/voz2Fragment" />
+        <action
+            android:id="@+id/action_voz1Fragment_to_vozFragment"
+            app:destination="@id/vozFragment" />
+        <action
+            android:id="@+id/action_voz1Fragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/voz2Fragment"
+        android:name="com.example.vinyls.view.Voz2Fragment"
+        android:label=""
+        tools:layout="@layout/fragment_voz2" >
+        <action
+            android:id="@+id/action_voz2Fragment_to_vozFragment"
+            app:destination="@id/vozFragment" />
+        <action
+            android:id="@+id/action_voz2Fragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+</navigation>

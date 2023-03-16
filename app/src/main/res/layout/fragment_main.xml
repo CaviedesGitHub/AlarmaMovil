@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.LoginFragment" >
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/Rosado"
+            android:orientation="vertical"
+            android:padding="0dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <TextView
+                android:id="@+id/textProxima"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/MsgProxima"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnAddAlarma"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/agregar"
+                android:textSize="16sp"
+                app:icon="@drawable/mas" />
+
+            <TextView
+                android:id="@+id/textTituloLista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lista de Alarmas"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lstAlarmsRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Fucsia"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <Button
+                android:id="@+id/btnAlarma"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:backgroundTint="@color/Fucsia"
+                android:text="@string/alarmasub"
+                android:textColor="@color/design_default_color_secondary" />
+
+            <Button
+                android:id="@+id/btnVoz"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:backgroundTint="@color/Fucsia"
+                android:text="@string/alarma_voz"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnCron"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:backgroundTint="@color/Fucsia"
+                android:text="@string/cronometro"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
