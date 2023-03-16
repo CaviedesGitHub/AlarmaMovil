@@ -58,6 +58,7 @@
                     app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
                     app:hintTextColor="@color/design_default_color_secondary"
                     android:hint="@string/fecha"
+                    app:helperText="Doble Tap"
                     app:startIconDrawable="@drawable/calendar_days">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -84,6 +85,7 @@
                     app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
                     app:hintTextColor="@color/design_default_color_secondary"
                     android:hint="@string/hora"
+                    app:helperText="Doble Tap"
                     app:startIconDrawable="@drawable/clock_solid">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -160,6 +162,7 @@
                     app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
                     app:hintTextColor="@color/design_default_color_secondary"
                     android:hint="@string/fecha_final"
+                    app:helperText="Doble Tap"
                     app:startIconDrawable="@drawable/calendar_days">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -186,6 +189,7 @@
                     app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
                     app:hintTextColor="@color/design_default_color_secondary"
                     android:hint="Ubicacion"
+                    app:helperText="Doble Tap"
                     app:startIconDrawable="@drawable/location_dot_solid">
 
                     <com.google.android.material.textfield.TextInputEditText
